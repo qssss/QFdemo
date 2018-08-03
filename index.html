@@ -5,12 +5,44 @@
 	<title>Document</title>
 </head>
 <body>
+	基本操作流程
+
 	1.安装git 直接下载安装包
 	2.将电脑与github远程仓库进行配置
 		配置用户名
 		git config --global user.name '用户名'
 		git config --global user.email '邮箱'
 	3.cd 到本地的文件夹
-	4.将本地文件推送到虚拟仓库 git init
+	4.将本地文件推送到虚拟仓库 
+		git init 初始化虚拟仓库 会生成一个.git文件
+		git add * 将本地文件推送到虚拟仓库
+		git commit -m '描述' 描述本次提交的信息
+		git status 查看当前的提交状态
+	5.将内容从虚拟仓库推送到远程仓库中
+		首先 本地需要有权限链接远程仓库  要生成ssh-key
+		ssh-keygen -t rsa -C '13720126747@163.com'
+
+		然后打开c盘 -> 用户 ->电脑名字 -> .ssh ->id_rsa.pub 复制这一串文字
+
+		打开github -> setting -> SSH and GPG keys -> 新建key填入值 ->弹出框中输入github密码确认 -> 配置成功 电脑将有权限向远程仓库推送文件
+
+	6. 将虚拟仓库文件推送到远程仓库
+
+		(1).将提交到哪个仓库 
+			git remote add origin https://github.com/qssss/QFdemo.git
+		(2).将虚拟仓库的文件推送到远程仓库
+			git push -u origin master
+
+
+
+
+	其他操作命令
+	git diff
+	git log   查看提交的日志
+	git reset --hard -HEAD^ 
+		返回到上一个版本 
+		两个箭头表示返回两个版本
+		或者直接跟版本号 git reset --hard + 版本号
+
 </body>
 </html>
