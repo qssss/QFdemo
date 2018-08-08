@@ -1,0 +1,66 @@
+.pos-container {
+    .topbar {
+        height: .44rem;
+        display: flex;
+        padding: 0 .2rem;
+        @include border(0 0 1px 0,#dddee1);
+        span {
+            flex: 1;
+            line-height: .44rem;
+            height: .44rem;
+            font-size: .14rem;
+            display: block;
+            color: #666;
+        }
+        button {
+           height: .3rem;
+           font-size: .12rem;
+           color: #00b38a;
+           background-color: #f5f5f5;
+           border-radius: .2rem;
+           border: none;
+           padding: .04rem .25rem;
+           margin: .07rem 0;
+           cursor: pointer;
+        }
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        li {
+            @include border(0 0 1px 0,#dddee1);
+            padding: .1rem;
+            display: flex;
+            align-items: center;
+            line-height: 1;
+            img {
+                width: .6rem;
+                height: .6rem;
+            }
+            div {
+                flex: 1;
+                padding-left: .12rem;
+                color: #333;
+                h1 {
+                    font-size: .16rem;
+                    margin-bottom: .08rem;
+                }
+                h2 {
+                    font-size: .14rem;
+                    margin-bottom: .08rem;
+                    font-weight: normal;
+                }
+                h3 {
+                    font-size: .12rem;
+                    margin-bottom: .08rem;
+                    font-weight: normal;
+                    color: #666;
+                }
+            }
+            p {
+                color: #00b38a;
+                font-size: .16rem;
+            }
+        }
+    }
+}
