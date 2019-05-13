@@ -39,7 +39,6 @@
 			git push
 
 	其他操作命令
-	git rm + 文件 删除文件
 	git diff
 	git log   查看提交的日志
 	git reset --hard -HEAD^ 
@@ -49,6 +48,20 @@
 	git clone + 地址 将仓库克隆到本地
 	
 	7.本地删除的文件如何同步到远程上
+	这里分两种情况
+	1.第一种情况 确实要删除改文件
+		删除某个文件
+			git rm + 文件名
+			git commit -m '删除文件'
+			git push
+		删除文件夹
+			git rm -r + 文件夹名
+			git commit -m '删除文件夹'
+			git push
+	2.第二种情况 删错了 需要把本地文件恢复到最新版本
+		git checkout -- 文件
+		git checkout 用于将版本库的文件替换工作区的文件 无论工作区修改还是删除都可以还原
+
 	
 	
 	
